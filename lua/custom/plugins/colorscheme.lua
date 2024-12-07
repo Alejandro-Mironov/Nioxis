@@ -48,7 +48,7 @@ return {
           surface1 = '#5A4551',
           surface0 = '#44313B',
 
-          lavender = '#ffcade',
+          lavender = '#FFCBBC',
           base = '#FFFFFF',
           mantle = '#211924',
           crust = '#1a1016',

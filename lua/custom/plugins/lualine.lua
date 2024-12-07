@@ -18,7 +18,7 @@ return {
     -- configure lualine with modified theme
     lualine.setup {
       options = {
-        theme = 'OceanicNext',
+        theme = 'catppuccin',
       },
       sections = {
         lualine_x = {
