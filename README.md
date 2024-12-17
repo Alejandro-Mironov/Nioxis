@@ -120,14 +120,14 @@ External Requirements:
   - If you want to write Golang, you will need `go`
   - etc.
 
-[!NOTE]
-Whatever method you choose to install any dependency (ej. python, npm, nvim) make sure you add the installation directory to you PATH. You can do this by adding the following line at the end of your `.bash_profile`or `.zshrc` file, usually located in your HOME directory:
-
-```sh
-export PATH="/your/dependency/directory/:$PATH"
-```
-
-This will ensure that your terminal can see it. Most package managers already do this, but is a common gotcha if you are not experienced with the terminal.
+> [!NOTE]
+> Whatever method you choose to install any dependency (ej. python, npm, nvim) make sure you add the installation directory to you PATH. You can do this by adding the following line at the end of your `.bash_profile`or `.zshrc` file, usually located in your HOME directory:
+>
+> ```sh
+>  export PATH="/your/dependency/directory/:$PATH"
+> ```
+>
+> This will ensure that your terminal can see it. Most package managers already do this, but is a common gotcha if you are not experienced with the terminal.
 
 ## Install Electron
 
