@@ -57,14 +57,14 @@ The easiest way to install Neovim and its basic dependencies is using choco.
    either follow the instructions on the page or use winget,
    run in cmd as **admin**:
 
-```
+```bash
 winget install --accept-source-agreements chocolatey.chocolatey
 ```
 
 2. Install all requirements using choco, exit previous cmd and
    open a new one so that choco path is set, and run in cmd as **admin**:
 
-```
+```bash
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 ```
 
@@ -72,17 +72,17 @@ choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 
 <details><summary>macOS</summary>
 
-You can install Neovim on macOS with [Brew](https://brew.sh/).
+You can install Neovim on macOS with [Homebrew](https://brew.sh/).
 
-1. Install brew either by downloading the pkg from the main page or using this comand on the terminal.
+1. Install brew either by downloading the pkg from the main page or using this command on the terminal:
 
-```
+```sh
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2. Run the command to install Neovim.
 
-```
+```sh
 brew install neovim
 ```
 
@@ -90,7 +90,7 @@ brew install neovim
 
 <details><summary>Ubuntu</summary>
 
-```
+```sh
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install make gcc ripgrep unzip git xclip neovim
@@ -100,7 +100,7 @@ sudo apt install make gcc ripgrep unzip git xclip neovim
 
 <details><summary>Arch Install Steps</summary>
 
-```
+```sh
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 ```
 
@@ -110,7 +110,7 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 External Requirements:
 
-- If you followed the previous steps chances are, you already have most of this utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
+- If you followed the previous steps chances are, you already have most of this utils: `git`, `make`, `unzip`, C Compiler (`gcc`).
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - A great majority of plugins are written in Python. You can install it through the [official page](https://www.python.org/) or using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html).
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides icons that some plugins use. If you installed Oh My Zsh, it comes by default with MesloLGS.
@@ -119,6 +119,15 @@ External Requirements:
   - If you want to write Typescript, you need `npm`
   - If you want to write Golang, you will need `go`
   - etc.
+
+[!NOTE]
+Whatever method you choose to install any dependency (ej. python, npm, nvim) make sure you add the installation directory to you PATH. You can do this by adding the following line at the end of your `.bash_profile`or `.zshrc` file, usually located in your HOME directory:
+
+```sh
+export PATH="/your/dependency/directory/:$PATH"
+```
+
+This will ensure that your terminal can see it. Most package managers already do this, but is a common gotcha if you are not experienced with the terminal.
 
 ## Install Electron
 
@@ -142,13 +151,13 @@ git clone https://github.com/Alejandro-Mironov/Electron.git "${XDG_CONFIG_HOME:-
 
 If you're using `cmd.exe`:
 
-```
+```bash
 git clone https://github.com/Alejandro-Mironov/Electron.git "%localappdata%\nvim"
 ```
 
 If you're using `powershell.exe`
 
-```
+```bash
 git clone https://github.com/Alejandro-Mironov/Electron.git "${env:LOCALAPPDATA}\nvim"
 ```
 
@@ -158,7 +167,7 @@ git clone https://github.com/Alejandro-Mironov/Electron.git "${env:LOCALAPPDATA}
 
 You can uninstall this repo using the following commands, you can also use them to delete a previous installation and start clean again:
 
-```
+```sh
 # Linux / MacOS (unix)
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
@@ -188,7 +197,3 @@ nvim
 
 That's it! Lazy will install all the plugins you have. Use `:Lazy` to view
 current plugin status. Hit `q` to close the window.
-
-Read through the `init.lua` file in your configuration folder for more
-information about extending and exploring Neovim. That also includes
-examples of adding popularly requested plugins.
