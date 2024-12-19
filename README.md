@@ -1,4 +1,3 @@
-
 ![GitHub License](https://img.shields.io/github/license/Alejandro-Mironov/Nioxis?style=for-the-badge)
 ![macOS Badge](https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoSize=auto)
 ![Windows Badge](https://img.shields.io/badge/Windows-blue?style=for-the-badge&logoSize=auto)
@@ -7,7 +6,6 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Alejandro-Mironov/Nioxis?style=for-the-badge)
 
 ![Nioxis Logo](https://github.com/user-attachments/assets/6862d08d-56a3-448a-9a8a-b9b5ef887184)
-
 
 # Introduction
 
@@ -208,3 +206,29 @@ That's it! Lazy will install all the plugins you have. Use `:Lazy` to view
 current plugin status. Hit `q` to close the window.
 
 Please check the [documentation](/doc/doc.md) and ... files to further take advatage of this config, like how to change themes, settings, keybinds and how to link Neovim for embedded development and Godot.
+
+### UI Demo
+
+#### Greeter interface
+
+![Greeter](https://github.com/user-attachments/assets/eae6ed40-1278-4fbf-abdb-a4c0a3ddec82)
+
+#### Embedded LSP and Auto-completion
+
+![LSP](https://github.com/user-attachments/assets/4efbeb99-b831-4db4-95df-7e2f487640c0)
+
+#### PlatformIO integration
+
+![PlatformIO](https://github.com/user-attachments/assets/0399b4ca-3df1-4aee-832d-44a6184bbeba)
+
+#### LSP Diagnostics
+
+![Diagnostics](https://github.com/user-attachments/assets/c7a7a016-255c-4220-bce5-2dc76b095e93)
+
+#### Godot integration
+
+![Godot](https://github.com/user-attachments/assets/c5c8f3a9-891b-42fd-a7bb-54fa7b17f6bb)
+
+#### Git integration w/ Lazygit
+
+![LazyGit](https://github.com/user-attachments/assets/138df3b7-d979-49f6-8a9f-c2339b446278)
