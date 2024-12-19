@@ -1,6 +1,9 @@
-![GitHub License](https://img.shields.io/github/license/Alejandro-Mironov/Nioxis?style=for-the-badge) ![macOS Badge](https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoSize=auto) ![Windows Badge](https://img.shields.io/badge/Windows-blue?style=for-the-badge&logoSize=auto) ![Linux Badge](https://img.shields.io/badge/Linux-pink?style=for-the-badge&logo=archlinux&logoSize=auto)
+![GitHub License](https://img.shields.io/github/license/Alejandro-Mironov/Nioxis?style=for-the-badge) ![macOS Badge](https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoSize=auto) ![Windows Badge](https://img.shields.io/badge/Windows-blue?style=for-the-badge&logoSize=auto) ![Linux Badge](https://img.shields.io/badge/Linux-pink?style=for-the-badge&logo=archlinux&logoSize=auto) ![Neovim Badge](https://img.shields.io/badge/Neovim-10.2-blue?style=for-the-badge&logo=neovim) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Alejandro-Mironov/Nioxis?style=for-the-badge)
 
-![Nioxis Logo](https://github.com/user-attachments/assets/531e88bb-b7f5-454a-862a-1ec98f2f89a0)
+
+
+![Nioxis Logo](https://github.com/user-attachments/assets/6862d08d-56a3-448a-9a8a-b9b5ef887184)
+
 
 # Introduction
 
