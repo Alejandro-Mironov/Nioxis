@@ -1,8 +1,10 @@
-![Electron Neovim](https://github.com/user-attachments/assets/92cd5bc9-fdea-44a8-978f-971bb1f400b0)
+![GitHub License](https://img.shields.io/github/license/Alejandro-Mironov/Nioxis?style=for-the-badge) ![macOS Badge](https://img.shields.io/badge/macOS-black?style=for-the-badge&logo=apple&logoSize=auto) ![Windows Badge](https://img.shields.io/badge/Windows-blue?style=for-the-badge&logoSize=auto) ![Linux Badge](https://img.shields.io/badge/Linux-pink?style=for-the-badge&logo=archlinux&logoSize=auto)
+
+![Nioxis Logo](https://github.com/user-attachments/assets/531e88bb-b7f5-454a-862a-1ec98f2f89a0)
 
 # Introduction
 
-Electron is my Neovim configuration for Linux, macOS and Windows based on ['kickstart'](https://github.com/nvim-lua/kickstart.nvim). The main motivation for creating yet-another-nvim-config, is to alleviate some of the hassles I faced trying to configure neovim for two specific purposes : Game Development in Godot and Embedded Technologies/Microcontrollers.
+Nioxis is my Neovim configuration for Linux, macOS and Windows based on ['kickstart'](https://github.com/nvim-lua/kickstart.nvim). The main motivation for creating yet-another-nvim-config, is to alleviate some of the hassles I faced trying to configure Neovim for two specific purposes : Game Development in Godot and Embedded Technologies/Microcontrollers.
 
 The heart of this config is the `init.lua` file in the root directory. Since this a heavily modified version of kickstart, I intentionally left some of the comments already there and added some of my own to further refine this particular repo, however, I strongly suggest using the `:help` command.
 
@@ -41,7 +43,7 @@ The heart of this config is the `init.lua` file in the root directory. Since thi
 
 The [terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator) we choose is a big part of the appearance and features of Neovim. Most of the themes and plugins included in this config, take advantage of terminal emulators that use true colors. For a list of terminal emulators that support true colors, please see [here](https://github.com/termstandard/colors?tab=readme-ov-file#terminal-emulators).
 
-Since I work mostly on macOS, I can recommend checking out [kitty](https://sw.kovidgoyal.net/kitty/), [iTerm2](https://iterm2.com/), [Alacritty](https://alacritty.org/) or my personal favorite and choice [wezterm](https://wezfurlong.org/wezterm/index.html). Wezterm uses Lua for its config file that I will also include in this repo.
+Since I work mostly on macOS, I can recommend checking out [kitty](https://sw.kovidgoyal.net/kitty/), [iTerm2](https://iterm2.com/), [Alacritty](https://alacritty.org/) or my favorite and personal choice [wezterm](https://wezfurlong.org/wezterm/index.html). Wezterm uses Lua for its config file that I will also include in this repo.
 
 In order to make the terminal a lot prettier, I recommend installing [Oh My Zsh](https://ohmyz.sh/). There are a lot of [themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) to choose from, but the examples I'll provide in this README will showcase [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
 
@@ -114,7 +116,7 @@ External Requirements:
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - A great majority of plugins are written in Python. You can install it through the [official page](https://www.python.org/) or using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html).
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides icons that some plugins use. If you installed Oh My Zsh, it comes by default with MesloLGS.
-  - If you have it set `vim.g.have_nerd_font` in `init.lua` to true
+  - `vim.g.have_nerd_font` in `init.lua` is set to `true` by default, change it to `false` should you don'f feel installing a Nerd Font.
 - Language Setup:
   - If you want to write Typescript, you need `npm`
   - If you want to write Golang, you will need `go`
@@ -129,22 +131,22 @@ External Requirements:
 >
 > This will ensure that your terminal can see it. Most package managers already do this, but is a common gotcha if you are not experienced with the terminal.
 
-## Install Electron
+## Install Nioxis
 
 Neovim's configurations are located under the following paths, depending on your OS:
 
 | OS                   | PATH                                      |
 | :------------------- | :---------------------------------------- |
-| Linux, MacOS         | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
+| Linux, macOS         | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
 | Windows (cmd)        | `%localappdata%\nvim\`                    |
 | Windows (powershell) | `$env:LOCALAPPDATA\nvim\`                 |
 
-### Clone Electron
+### Clone Nioxis
 
 #### Linux and Mac
 
 ```sh
-git clone https://github.com/Alejandro-Mironov/Electron.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/Alejandro-Mironov/Nioxis.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 #### Windows
@@ -152,13 +154,13 @@ git clone https://github.com/Alejandro-Mironov/Electron.git "${XDG_CONFIG_HOME:-
 If you're using `cmd.exe`:
 
 ```bash
-git clone https://github.com/Alejandro-Mironov/Electron.git "%localappdata%\nvim"
+git clone https://github.com/Alejandro-Mironov/Nioxis.git "%localappdata%\nvim"
 ```
 
 If you're using `powershell.exe`
 
 ```bash
-git clone https://github.com/Alejandro-Mironov/Electron.git "${env:LOCALAPPDATA}\nvim"
+git clone https://github.com/Alejandro-Mironov/Nioxis.git "${env:LOCALAPPDATA}\nvim"
 ```
 
 </details>
@@ -168,7 +170,7 @@ git clone https://github.com/Alejandro-Mironov/Electron.git "${env:LOCALAPPDATA}
 You can uninstall this repo using the following commands, you can also use them to delete a previous installation and start clean again:
 
 ```sh
-# Linux / MacOS (unix)
+# Linux / macOS (unix)
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
@@ -197,3 +199,5 @@ nvim
 
 That's it! Lazy will install all the plugins you have. Use `:Lazy` to view
 current plugin status. Hit `q` to close the window.
+
+Please check the [documentation](/doc/doc.md) and ... files to further take advatage of this config, like how to change themes, settings, keybinds and how to link Neovim for embedded development and Godot.
