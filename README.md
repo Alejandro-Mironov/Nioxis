@@ -119,6 +119,7 @@ External Requirements:
 
 - If you followed the previous steps chances are, you already have most of this utils: `git`, `make`, `unzip`, C Compiler (`gcc`).
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [Lazygit](https://github.com/jesseduffield/lazygit).
 - A great majority of plugins are written in Python. You can install it through the [official page](https://www.python.org/) or using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html).
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides icons that some plugins use. If you installed Oh My Zsh, it comes by default with MesloLGS.
   - `vim.g.have_nerd_font` in `init.lua` is set to `true` by default, change it to `false` should you don'f feel installing a Nerd Font.
