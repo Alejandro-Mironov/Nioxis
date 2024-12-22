@@ -11,7 +11,7 @@
 
 Nioxis is my Neovim configuration for Linux, macOS and Windows based on ['kickstart'](https://github.com/nvim-lua/kickstart.nvim). The main motivation for creating yet-another-nvim-config, is to alleviate some of the hassles I faced trying to configure Neovim for two specific purposes : Game Development in Godot and Embedded Technologies/Microcontrollers.
 
-The heart of this config is the `init.lua` file in the root directory. Since this a heavily modified version of kickstart, I intentionally left some of the comments already there and added some of my own to further refine this particular repo, however, I strongly suggest using the `:help` command.
+The heart of this config is the `init.lua` file in the root directory. Since this a heavily modified version of kickstart, I intentionally left some of the comments already there and added some of my own to further refine this particular repo, however, I strongly suggest reading the kickstart documentation or using the `:help` command if you find yourself in trouble.
 
 # Features
 
@@ -118,11 +118,12 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 External Requirements:
 
 - If you followed the previous steps chances are, you already have most of this utils: `git`, `make`, `unzip`, C Compiler (`gcc`).
-- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep#installation).
 - [Lazygit](https://github.com/jesseduffield/lazygit).
 - A great majority of plugins are written in Python. You can install it through the [official page](https://www.python.org/) or using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html).
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides icons that some plugins use. If you installed Oh My Zsh, it comes by default with MesloLGS.
-  - `vim.g.have_nerd_font` in `init.lua` is set to `true` by default, change it to `false` should you don'f feel installing a Nerd Font.
+  - `vim.g.have_nerd_font` in `init.lua` is set to `true` by default, change it to `false` should you don't feel like using a Nerd Font.
+- [Lazygit](https://github.com/jesseduffield/lazygit).
 - Language Setup:
   - If you want to write Typescript, you need `npm`
   - If you want to write Golang, you will need `go`

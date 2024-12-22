@@ -60,4 +60,19 @@ config.macos_window_background_blur = 100
 ```
 
 > [!NOTE]
-> By default, Neovim will use the colors from the theme set in the terminal configuration. You can individually tell Neovim to use the same (or another) theme via the `colorscheme.lua` file in the /lua/custom/plugins folder.
+> By default, Neovim will use the colors from the theme set in the terminal configuration. You can individually tell Neovim to use the same (or another) theme via the `colorscheme.lua` file in the `/lua/custom/plugins` folder.
+
+## Setting up Neovim
+
+If you are an avid user of Neovim, this section can be skipped as the majority of the `init.lua` file, is heavily commented and it's self-explanatory, however, if you are somewhat new to Neovim, I want to point out a few key lines of code to make your experience a lot smoother.
+
+### Leader Key
+
+The leader key is a special key that you can set as a prefix for creating custom shortcuts. This key is set in:
+
+```Lua
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+```
+
+By default, this key is set to `space`, but you can change it to whatever key you like. Make a note of this key since you will use it for most of the commands in this config.
