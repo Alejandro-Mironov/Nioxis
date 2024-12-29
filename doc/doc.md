@@ -64,7 +64,7 @@ config.macos_window_background_blur = 100
 
 ## Setting up Neovim
 
-If you are an avid user of Neovim, this section can be skipped as the majority of the `init.lua` file, is heavily commented and it's self-explanatory, however, if you are somewhat new to Neovim, I want to point out a few key lines of code to make your experience a lot smoother.
+If you are an avid user of Neovim, this section can be skipped as the majority of the `init.lua` file, is heavily commented, and it's self-explanatory, however, if you are somewhat new to Neovim, I want to point out a few key lines of code to make your experience a lot smoother.
 
 ### Leader Key
 
@@ -76,3 +76,110 @@ vim.g.maplocalleader = ' '
 ```
 
 By default, this key is set to `space`, but you can change it to whatever key you like. Make a note of this key since you will use it for most of the commands in this config.
+
+### Language servers and highlighting.
+
+#### Tresitter
+
+This config includes [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) for syntax highlighting and works in tandem with [lsp-config](https://github.com/neovim/nvim-lspconfig) for rich auto-completion and suggestions. By default, treesitter will install the language if not detected; additionally you can specify what languages you want in the `init.lua` file:
+
+```Lua
+opts = {
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'gdscript',
+        'godot_resource',
+        'gdshader',
+        'rust',
+      },
+```
+
+#### Mason
+
+Mason is your point of entry for installing language servers for the LSP. You can open Mason by using the command `:Mason`.
+
+> [!WARNING]
+> Is important to note, that some language servers will require the dependencies of the language you try to install, for instance, if you want to install the Node LSP, you will need to install `npm`.
+> If you have trouble installing a language, you can run `:checkhealth` to see what dependencies are giving you trouble.
+
+### Plugins
+
+I made this config as modular and simple to understand as possible. Most plugins are self-contained in a single Lua file in the `/lua/custom/plugins` folder.
+
+You can install new plugins by creating a `.lua` file inside this folder following the next template:
+
+```Lua
+return{
+	'guthubuser/pluginrepo.nvim',
+	opts = {
+	},
+}
+```
+
+> [!NOTE]
+> To properly configure each plugin, make sure to read its documentation. While you only need to specify the short Github url, the `opts` block will let you configure additional functionality for your plugin.
+
+Once you save the `.lua` file, restart Neovim and Lazy will run the installation. If you want to manage, update, or uninstall your plugins, you can use the command `:Lazy` to open the manager.
+
+### Themes
+
+You can further customize Neovim by applying a color theme. In this config I've chosen [Catppuccin](https://github.com/catppuccin/nvim) and while I made some tweaking easy, feel free to change it to whatever you like. You can find the `colorscheme.lua` in the plugin's folder.
+
+> [!NOTE]
+> If you have enabled background transparency in your terminal, set `transparent_background` to `true`.
+
+Catppuccin has a couple variations or "flavours", you can set them in:
+
+```Lua
+config = function()
+    require('catppuccin').setup {
+      flavour = 'mocha', -- latte, frappe, macchiato, mocha
+      background = { -- :h background
+        light = 'latte',
+        dark = 'mocha',
+      },
+```
+
+Fortunately, the catppuccin documentation is very easy to follow, and they provide the [style-guide](https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md) to modify the colors, you can do this in the `color_overrides` section:
+
+```Lua
+...
+color_overrides = {
+        mocha = {
+          text = '#F4CDE9',
+          subtext1 = '#DEBAD4',
+          subtext0 = '#C8A6BE',
+          overlay2 = '#B293A8',
+          overlay1 = '#9C7F92',
+          overlay0 = '#866C7D',
+          surface2 = '#705867',
+          surface1 = '#5A4551',
+          surface0 = '#44313B',
+
+          lavender = '#FFCBBC',
+          base = '#FFFFFF',
+          mantle = '#211924',
+          crust = '#1a1016',
+        },
+...
+```
+
+Finally, the cherry on top (at least for me): You can specify a "highlight" color for the current line number. This is done in the following lines:
+
+```lua
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'grey' })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = 'pink' })
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = 'grey' })
+```
+
+Where `LineNr` is the color of the current line number.

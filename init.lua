@@ -333,6 +333,7 @@ require('lazy').setup({
         'gdscript',
         'godot_resource',
         'gdshader',
+        'rust',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
